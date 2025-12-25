@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston English Center - Premium Language Learning</title>
+    <meta name="description"
+        content="Transform your English skills with Boston English Center's immersive learning experience.">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23000' width='100' height='100' rx='20'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-size='60' font-family='sans-serif' fill='%23f59e0b'>B</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: { 400: '#f59e0b', 500: '#d97706', 600: '#b45309' },
+                        accent: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' },
+                        neutral: { 800: '#1f1f1f', 900: '#0a0a0a', 950: '#000000' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .card-hover:hover {
+            box-shadow: 0 25px 50px -12px rgba(245, 158, 11, 0.15);
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .glass {
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #d97706, #f59e0b);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #b45309, #d97706);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased bg-black text-white overflow-x-hidden">
+
+    <nav class="relative z-50 py-6 px-6 lg:px-12 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold text-gradient">BostonEC</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a>
+                <a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                <a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a>
+                <a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
+            </div>
+            <button class="px-6 py-2.5 btn-primary rounded-full font-medium hover:opacity-90 transition-opacity">Get
+                Started</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="relative min-h-screen flex items-center py-20 px-6 lg:px-12">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm">
+                        <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                        <span class="text-gray-400">Trusted by 50,000+ learners worldwide</span>
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                        Master English<br><span class="text-gradient">Like Never Before</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 max-w-lg">Experience immersive language learning with expert
+                        lessons,
+                        native speakers, and a community that supports your journey.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="px-8 py-4 btn-primary rounded-full font-semibold text-lg hover:opacity-90 transition-all hover:scale-105">Start
+                            Free Trial</button>
+                        <button
+                            class="px-8 py-4 glass rounded-full font-semibold text-lg hover:bg-white/5 transition-all flex items-center gap-2">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
+                            </svg>
+                            Watch Demo
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-6 pt-4">
+                        <div class="flex -space-x-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-neutral-800 border-2 border-black flex items-center justify-center text-xs font-medium">
+                                SC</div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-neutral-800 border-2 border-black flex items-center justify-center text-xs font-medium">
+                                MR</div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-neutral-800 border-2 border-black flex items-center justify-center text-xs font-medium">
+                                YT</div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-neutral-800 border-2 border-black flex items-center justify-center text-xs font-medium">
+                                +5K</div>
+                        </div>
+                        <div>
+                            <div class="flex text-amber-500">★★★★★</div>
+                            <p class="text-sm text-gray-400">4.9/5 from 2,000+ reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <div class="relative w-full h-[520px]">
+                        <div class="absolute inset-0 glass rounded-3xl p-6">
+                            <div class="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-sm">Live Session</p>
+                                        <p class="text-xs text-gray-400">with Emma Williams</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                                    <span class="text-xs text-gray-400">Recording</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4 mb-6">
+                                <div class="flex gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center text-xs font-medium shrink-0">
+                                        EW</div>
+                                    <div class="bg-white/5 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]">
+                                        <p class="text-sm text-gray-300">"Can you describe your daily routine using
+                                            present
+                                            simple tense?"</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 justify-end">
+                                    <div
+                                        class="bg-amber-500/10 border border-amber-500/20 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%]">
+                                        <p class="text-sm text-gray-300">"I wake up at 7 AM. Then I have breakfast and
+                                            go to
+                                            work..."</p>
+                                    </div>
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center text-xs font-medium text-amber-500 shrink-0">
+                                        You</div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center text-xs font-medium shrink-0">
+                                        EW</div>
+                                    <div class="bg-white/5 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]">
+                                        <p class="text-sm text-gray-300">"Excellent! Your pronunciation is improving.
+                                            Let's
+                                            practice the 'th' sound next."</p>
+                                        <div class="flex items-center gap-2 mt-2 pt-2 border-t border-white/5">
+                                            <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <span class="text-xs text-amber-500">+15 XP earned</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl">
+                                <div class="flex-1 text-sm text-gray-400">Type your response...</div>
+                                <button aria-label="Record voice message"
+                                    class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center hover:bg-amber-600 transition-colors">
+                                    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-4 -left-4 glass rounded-2xl p-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold">23</p>
+                                    <p class="text-xs text-gray-400">Day Streak</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -top-2 -right-2 glass rounded-2xl p-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center">
+                                    <span class="text-xl font-bold text-amber-500">B1</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-sm">Intermediate</p>
+                                    <p class="text-xs text-gray-400">Level reached</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="features" class="relative py-24 px-6 lg:px-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="px-4 py-2 glass rounded-full text-sm text-amber-500 inline-block mb-4">Features</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-4">Everything You Need to <span
+                            class="text-gradient">Succeed</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Our platform combines proven teaching methods with expert
+                        instructors.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group p-8 glass rounded-3xl hover:bg-white/5 transition-all card-hover">
+                        <div
+                            class="w-14 h-14 bg-neutral-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Smart Learning</h3>
+                        <p class="text-gray-400">Personalized lessons that adapt to your learning pace and style in
+                            real-time.</p>
+                    </div>
+                    <div class="group p-8 glass rounded-3xl hover:bg-white/5 transition-all card-hover">
+                        <div
+                            class="w-14 h-14 bg-neutral-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Native Speakers</h3>
+                        <p class="text-gray-400">Practice with certified native English speakers from around the world.
+                        </p>
+                    </div>
+                    <div class="group p-8 glass rounded-3xl hover:bg-white/5 transition-all card-hover">
+                        <div
+                            class="w-14 h-14 bg-neutral-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Progress Tracking</h3>
+                        <p class="text-gray-400">Detailed analytics and insights to monitor your improvement journey.
+                        </p>
+                    </div>
+                    <div class="group p-8 glass rounded-3xl hover:bg-white/5 transition-all card-hover">
+                        <div
+                            class="w-14 h-14 bg-neutral-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Interactive Experience</h3>
+                        <p class="text-gray-400">Earn points, badges, and compete with learners globally.</p>
+                    </div>
+                    <div class="group p-8 glass rounded-3xl hover:bg-white/5 transition-all card-hover">
+                        <div
+                            class="w-14 h-14 bg-neutral-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Mobile Learning</h3>
+                        <p class="text-gray-400">Learn anywhere, anytime with our fully-featured mobile apps.</p>
+                    </div>
+                    <div class="group p-8 glass rounded-3xl hover:bg-white/5 transition-all card-hover">
+                        <div
+                            class="w-14 h-14 bg-neutral-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Certification</h3>
+                        <p class="text-gray-400">Earn recognized certificates upon completing each level.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="relative py-24 px-6 lg:px-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="px-4 py-2 glass rounded-full text-sm text-amber-500 inline-block mb-4">Pricing</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-4">Simple, <span
+                            class="text-gradient">Transparent</span>
+                        Pricing</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto mb-8">Choose the plan that fits your learning goals.</p>
+                    <div class="inline-flex items-center gap-4 p-2 glass rounded-full">
+                        <button onclick="togglePricing('monthly')" id="monthlyBtn"
+                            class="px-6 py-2 rounded-full font-medium transition-all btn-primary">Monthly</button>
+                        <button onclick="togglePricing('yearly')" id="yearlyBtn"
+                            class="px-6 py-2 rounded-full font-medium transition-all text-gray-400 hover:text-white">Yearly
+                            <span class="text-amber-500 text-sm">-20%</span></button>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="pricing-card p-8 glass rounded-3xl" data-expanded="false">
+                        <div class="pricing-header cursor-pointer md:cursor-default" onclick="toggleCard(this)">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold">Basic</h3><span
+                                    class="md:hidden text-gray-400 toggle-icon">▼</span>
+                            </div>
+                            <div class="mb-6"><span class="text-4xl font-bold monthly-price">$9</span><span
+                                    class="yearly-price hidden text-4xl font-bold">$7</span><span
+                                    class="text-gray-400">/month</span></div>
+                        </div>
+                        <div class="pricing-details hidden md:block">
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> 5 lessons per
+                                    week
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Basic
+                                    assistance
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Progress
+                                    tracking
+                                </li>
+                                <li class="flex items-center gap-3 text-gray-400"><span>✗</span> Native speaker sessions
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full py-3 glass rounded-full font-medium hover:bg-white/5 transition-all">Get
+                                Started</button>
+                        </div>
+                    </div>
+                    <div class="pricing-card relative p-8 rounded-3xl bg-gradient-to-b from-amber-500/10 to-transparent border-2 border-amber-500/30 scale-105"
+                        data-expanded="false">
+                        <div
+                            class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 btn-primary rounded-full text-sm font-medium">
+                            Most Popular</div>
+                        <div class="pricing-header cursor-pointer md:cursor-default" onclick="toggleCard(this)">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold">Pro</h3><span
+                                    class="md:hidden text-gray-400 toggle-icon">▼</span>
+                            </div>
+                            <div class="mb-6"><span class="text-4xl font-bold monthly-price">$29</span><span
+                                    class="yearly-price hidden text-4xl font-bold">$23</span><span
+                                    class="text-gray-400">/month</span></div>
+                        </div>
+                        <div class="pricing-details hidden md:block">
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Unlimited
+                                    lessons
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Advanced tutor
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> 2 native
+                                    sessions/week</li>
+                                <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Priority
+                                    support
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full py-3 btn-primary rounded-full font-medium hover:opacity-90 transition-all">Get
+                                Started</button>
+                        </div>
+                    </div>
+                    <div class="pricing-card p-8 glass rounded-3xl" data-expanded="false">
+                        <div class="pricing-header cursor-pointer md:cursor-default" onclick="toggleCard(this)">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold">Enterprise</h3><span
+                                    class="md:hidden text-gray-400 toggle-icon">▼</span>
+                            </div>
+                            <div class="mb-6"><span class="text-4xl font-bold monthly-price">$99</span><span
+                                    class="yearly-price hidden text-4xl font-bold">$79</span><span
+                                    class="text-gray-400">/month</span></div>
+                        </div>
+                        <div class="pricing-details hidden md:block">
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Everything in
+                                    Pro
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Unlimited
+                                    native
+                                    sessions</li>
+                                <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Custom
+                                    curriculum
+                                </li>
+                                <li class="flex items-center gap-3"><span class="text-amber-500">✓</span> Dedicated
+                                    manager
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full py-3 glass rounded-full font-medium hover:bg-white/5 transition-all">Contact
+                                Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="relative py-24 px-6 lg:px-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span
+                        class="px-4 py-2 glass rounded-full text-sm text-amber-500 inline-block mb-4">Testimonials</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-4">Loved by <span
+                            class="text-gradient">Thousands</span>
+                    </h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 glass rounded-3xl">
+                        <div class="flex text-amber-500 mb-4">★★★★★</div>
+                        <p class="text-gray-400 mb-6">"This platform transformed my English skills in just 3 months. The
+                            tutors are incredibly helpful!"</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-neutral-800 rounded-full flex items-center justify-center font-medium">
+                                SC</div>
+                            <div>
+                                <p class="font-semibold">Sarah Chen</p>
+                                <p class="text-sm text-gray-400">Marketing Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 glass rounded-3xl">
+                        <div class="flex text-amber-500 mb-4">★★★★★</div>
+                        <p class="text-gray-400 mb-6">"The native speaker sessions are game-changing. I feel so much
+                            more
+                            confident now."</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-neutral-800 rounded-full flex items-center justify-center font-medium">
+                                MR</div>
+                            <div>
+                                <p class="font-semibold">Marco Rodriguez</p>
+                                <p class="text-sm text-gray-400">Software Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 glass rounded-3xl">
+                        <div class="flex text-amber-500 mb-4">★★★★★</div>
+                        <p class="text-gray-400 mb-6">"Best investment I've made in my career. The personalized learning
+                            path kept me motivated."</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-neutral-800 rounded-full flex items-center justify-center font-medium">
+                                YT</div>
+                            <div>
+                                <p class="font-semibold">Yuki Tanaka</p>
+                                <p class="text-sm text-gray-400">Business Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="relative py-24 px-6 lg:px-12">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="px-4 py-2 glass rounded-full text-sm text-amber-500 inline-block mb-4">FAQ</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-4">Got <span class="text-gradient">Questions?</span>
+                    </h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="faq-item glass rounded-2xl overflow-hidden">
+                        <button class="w-full p-6 text-left flex justify-between items-center font-semibold"
+                            onclick="toggleFaq(this)">
+                            <span>How long does it take to see results?</span><span
+                                class="faq-icon text-2xl transition-transform">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6 text-gray-400">Most learners see significant improvement
+                            within 4-6 weeks of consistent practice.</div>
+                    </div>
+                    <div class="faq-item glass rounded-2xl overflow-hidden">
+                        <button class="w-full p-6 text-left flex justify-between items-center font-semibold"
+                            onclick="toggleFaq(this)">
+                            <span>Can I cancel my subscription anytime?</span><span
+                                class="faq-icon text-2xl transition-transform">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6 text-gray-400">Yes! You can cancel your subscription at
+                            any
+                            time with no hidden fees.</div>
+                    </div>
+                    <div class="faq-item glass rounded-2xl overflow-hidden">
+                        <button class="w-full p-6 text-left flex justify-between items-center font-semibold"
+                            onclick="toggleFaq(this)">
+                            <span>Do you offer certificates?</span><span
+                                class="faq-icon text-2xl transition-transform">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6 text-gray-400">Yes, we provide recognized certificates
+                            upon
+                            completing each proficiency level.</div>
+                    </div>
+                    <div class="faq-item glass rounded-2xl overflow-hidden">
+                        <button class="w-full p-6 text-left flex justify-between items-center font-semibold"
+                            onclick="toggleFaq(this)">
+                            <span>What devices are supported?</span><span
+                                class="faq-icon text-2xl transition-transform">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6 text-gray-400">Our platform works on all modern
+                            browsers,
+                            iOS and Android devices.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="relative py-16 px-6 lg:px-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="text-2xl font-bold text-gradient">BostonEC</a>
+                    <p class="text-gray-400 mt-4">Empowering learners worldwide to master English with confidence.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Product</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Mobile App</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-400">© 2025 Boston English Center. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" aria-label="Follow us on X (Twitter)"
+                        class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/5 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Follow us on LinkedIn"
+                        class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/5 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Follow us on Instagram"
+                        class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/5 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function togglePricing(period) {
+            const monthly = document.querySelectorAll('.monthly-price'), yearly = document.querySelectorAll('.yearly-price');
+            const mBtn = document.getElementById('monthlyBtn'), yBtn = document.getElementById('yearlyBtn');
+            if (period === 'monthly') {
+                monthly.forEach(el => el.classList.remove('hidden')); yearly.forEach(el => el.classList.add('hidden'));
+                mBtn.className = 'px-6 py-2 rounded-full font-medium transition-all btn-primary';
+                yBtn.className = 'px-6 py-2 rounded-full font-medium transition-all text-gray-400 hover:text-white';
+            } else {
+                monthly.forEach(el => el.classList.add('hidden')); yearly.forEach(el => el.classList.remove('hidden'));
+                yBtn.className = 'px-6 py-2 rounded-full font-medium transition-all btn-primary';
+                mBtn.className = 'px-6 py-2 rounded-full font-medium transition-all text-gray-400 hover:text-white';
+            }
+        }
+
+        function toggleCard(header) {
+            if (window.innerWidth >= 768) return;
+            const card = header.closest('.pricing-card'), details = card.querySelector('.pricing-details'), icon = card.querySelector('.toggle-icon');
+            if (card.dataset.expanded === 'true') { details.classList.add('hidden'); icon.textContent = '▼'; card.dataset.expanded = 'false'; }
+            else {
+                document.querySelectorAll('.pricing-card').forEach(c => { c.querySelector('.pricing-details').classList.add('hidden'); c.querySelector('.toggle-icon').textContent = '▼'; c.dataset.expanded = 'false'; });
+                details.classList.remove('hidden'); icon.textContent = '▲'; card.dataset.expanded = 'true';
+            }
+        }
+        function toggleFaq(button) {
+            const item = button.parentElement, answer = item.querySelector('.faq-answer'), icon = button.querySelector('.faq-icon'), isOpen = !answer.classList.contains('hidden');
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+            document.querySelectorAll('.faq-icon').forEach(i => { i.textContent = '+'; i.style.transform = 'rotate(0deg)'; });
+            if (!isOpen) { answer.classList.remove('hidden'); icon.textContent = '−'; icon.style.transform = 'rotate(180deg)'; }
+        }
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) document.querySelectorAll('.pricing-details').forEach(d => d.classList.remove('hidden'));
+            else document.querySelectorAll('.pricing-card').forEach(c => { if (c.dataset.expanded !== 'true') c.querySelector('.pricing-details').classList.add('hidden'); });
+        });
+    </script>
+</body>
+
+</html>
