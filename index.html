@@ -119,6 +119,23 @@
         .btn-primary:hover {
             background: linear-gradient(135deg, #b45309, #d97706);
         }
+
+        .burger-open .burger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .burger-open .burger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-open .burger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu-open {
+            display: flex !important;
+            opacity: 1 !important;
+        }
     </style>
 </head>
 
@@ -133,10 +150,40 @@
                 <a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a>
                 <a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
             </div>
-            <button class="px-6 py-2.5 btn-primary rounded-full font-medium hover:opacity-90 transition-opacity">Get
-                Started</button>
+            <div class="flex items-center gap-4">
+                <button
+                    class="hidden md:block px-6 py-2.5 btn-primary rounded-full font-medium hover:opacity-90 transition-opacity">Get
+                    Started</button>
+                <!-- Burger Menu Button -->
+                <button id="burgerBtn"
+                    class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 z-50"
+                    aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                    <span class="burger-line w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="burger-line w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="burger-line w-6 h-0.5 bg-white transition-all duration-300"></span>
+                </button>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu"
+        class="fixed top-0 left-0 w-screen h-screen z-[100] hidden opacity-0 transition-all duration-300"
+        style="background-color: #000000;">
+        <div class="flex flex-col items-center justify-center h-full w-full gap-8 text-center">
+            <a href="#features" class="text-2xl text-gray-300 hover:text-amber-500 transition-colors"
+                onclick="closeMobileMenu()">Features</a>
+            <a href="#pricing" class="text-2xl text-gray-300 hover:text-amber-500 transition-colors"
+                onclick="closeMobileMenu()">Pricing</a>
+            <a href="#testimonials" class="text-2xl text-gray-300 hover:text-amber-500 transition-colors"
+                onclick="closeMobileMenu()">Testimonials</a>
+            <a href="#faq" class="text-2xl text-gray-300 hover:text-amber-500 transition-colors"
+                onclick="closeMobileMenu()">FAQ</a>
+            <button
+                class="mt-4 px-8 py-3 btn-primary rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
+                onclick="closeMobileMenu()">Get Started</button>
+        </div>
+    </div>
 
     <main>
         <section class="relative min-h-screen flex items-center py-20 px-6 lg:px-12">
@@ -662,6 +709,23 @@
     </footer>
 
     <script>
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const burgerBtn = document.getElementById('burgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            burgerBtn.classList.toggle('burger-open');
+            mobileMenu.classList.toggle('mobile-menu-open');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            const burgerBtn = document.getElementById('burgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            burgerBtn.classList.remove('burger-open');
+            mobileMenu.classList.remove('mobile-menu-open');
+            document.body.classList.remove('overflow-hidden');
+        }
+
         function togglePricing(period) {
             const monthly = document.querySelectorAll('.monthly-price'), yearly = document.querySelectorAll('.yearly-price');
             const mBtn = document.getElementById('monthlyBtn'), yBtn = document.getElementById('yearlyBtn');
